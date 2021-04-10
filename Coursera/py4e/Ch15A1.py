@@ -14,10 +14,12 @@ cur.execute('''
 CREATE TABLE Counts (org TEXT, count INTEGER)''')
 
 fname = input('Enter file name: ')
-if (len(fname) < 1): fname = 'mbox-short.txt'
+if (len(fname) < 1):
+    fname = 'mbox-short.txt'
 fh = open(fname)
 for line in fh:
-    if not line.startswith('From: '): continue
+    if not line.startswith('From: '):
+        continue
     pieces = line.split()
     org = pieces[1].split('@')
     org = org[1]
@@ -29,7 +31,7 @@ for line in fh:
     else:
         cur.execute('UPDATE Counts SET count = count + 1 WHERE org = ?',
                     (org,))
-    conn.commit() #putting .commit out of the loop stupidly increases the velocity in which this program executes
+    conn.commit()  # putting .commit out of the loop stupidly increases the velocity in which this program executes
 
 # https://www.sqlite.org/lang_select.html
 sqlstr = 'SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10'

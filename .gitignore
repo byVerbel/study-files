@@ -2,6 +2,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,node,vue,vuejs,database
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,node,vue,vuejs,database
 
+### Folders ###
+my_env/
+.vscode/
+
 ### Database ###
 *.accdb
 *.db
