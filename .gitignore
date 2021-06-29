@@ -25,6 +25,13 @@ my_env/
 *.wav
 *.mp3
 
+### Files ###
+*.txt
+*.csv
+
+### Cards ###
+*.raw
+
 ### Node ###
 # Logs
 logs
