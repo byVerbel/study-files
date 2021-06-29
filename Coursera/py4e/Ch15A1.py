@@ -31,7 +31,7 @@ for line in fh:
     else:
         cur.execute('UPDATE Counts SET count = count + 1 WHERE org = ?',
                     (org,))
-    conn.commit()  # putting .commit out of the loop stupidly increases the velocity in which this program executes
+    conn.commit()  # putting .commit out of the loop stupidly increases the speed in which this program executes
 
 # https://www.sqlite.org/lang_select.html
 sqlstr = 'SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10'

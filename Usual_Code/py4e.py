@@ -1,25 +1,26 @@
 # Delete all punctuation marks in a text, line, string, etc.
-    import string # I can use puntuation or digits
+import string  # I can use puntuation or digits
 
-    .translate(str.maketrans('', '', string.punctuation))
+.translate(str.maketrans('', '', string.punctuation))
 
 # Create an istogram
-    x = {}
-    for y in z:
-        x[y] = x.get(y,0)+1
+x = {}
+for y in x:
+    x[y] = x.get(y, 0)+1
     print(x)
 
 # List comprehension
-    print(sorted([ (v,k) for k,v in c.items() ]))
+    print(sorted([(v, k) for k, v in c.items()]))
 
 # Regex searches
     import re
-    re.findall('\d+|$', 'aa33bbb44')[0] #use | to avoid traceback if there's no match
+    # use | to avoid traceback if there's no match
+    re.findall('\d+|$', 'aa33bbb44')[0]
 
 # Socket
     import socket
     mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    mysock.connect( ('data.pr4e.org', 80) )
+    mysock.connect(('data.pr4e.org', 80))
 
 # BeautifulSoup for searches
 # Look at the parts of a tag

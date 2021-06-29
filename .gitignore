@@ -23,6 +23,7 @@ my_env/
 
 ### Sound ###
 *.wav
+*.mp3
 
 ### Node ###
 # Logs
