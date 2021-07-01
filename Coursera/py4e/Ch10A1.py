@@ -7,20 +7,23 @@
 # list in reverse order and print out the person who has the most commits.
 
 fname = input("Enter file:")
-if len(fname) < 1 : fname = "mbox-short.txt"
+if len(fname) < 1:
+    fname = "mbox-short.txt"
 fh = open(fname)
 counts = {}
 
 for line in fh:
     stripline = line.rstrip()
-    if not stripline.startswith("From") : continue
-    if stripline.startswith("From:") : continue
+    if not stripline.startswith("From"):
+        continue
+    if stripline.startswith("From:"):
+        continue
     splitline = stripline.split()
     person = splitline[1]
-    counts[person] = counts.get(person,0)+1
+    counts[person] = counts.get(person, 0)+1
 
-flist = sorted([ (v,k) for k,v in counts.items() ], reverse=True)
+flist = sorted([(v, k) for k, v in counts.items()], reverse=True)
 
-for count,person in flist:
-    print(person,count)
+for count, person in flist:
+    print(person, count)
     break

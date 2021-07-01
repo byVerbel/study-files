@@ -4,8 +4,9 @@ import string  # I can use puntuation or digits
 .translate(str.maketrans('', '', string.punctuation))
 
 # Create an istogram
+z = []
 x = {}
-for y in x:
+for y in z:
     x[y] = x.get(y, 0)+1
     print(x)
 
@@ -26,3 +27,6 @@ for y in x:
 # Look at the parts of a tag
 
 # Code Snippets: I could make some snippets in VSCode with lines from this file
+
+# Search for consecutive sequences of a string
+    pat = "(?:{seq})+".format(seq=STR)
